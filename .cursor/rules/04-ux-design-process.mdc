@@ -1,0 +1,50 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# UX Design Process
+
+## Design Thinking Framework
+- Empathize: Understand users' needs, desires, and challenges
+  - Conduct user interviews and surveys
+  - Create user personas and empathy maps
+  - Observe users in their natural environment
+  
+- Define: Clearly articulate the problem to solve
+  - Create problem statements
+  - Define user needs and goals
+  - Set S.M.A.R.T. objectives
+  
+- Ideate: Generate potential solutions
+  - Conduct brainstorming sessions
+  - Use sketching and rapid prototyping
+  - Consider multiple approaches without judgment
+  
+- Prototype: Create tangible representations of ideas
+  - Build low-fidelity wireframes
+  - Develop clickable prototypes
+  - Focus on core functionality first
+  
+- Test: Evaluate solutions with real users
+  - Conduct usability testing
+  - Gather feedback systematically
+  - Iterate based on findings
+
+## User Research Methods
+- User interviews and contextual inquiry
+- Usability testing (moderated and unmoderated)
+- Card sorting for information architecture
+- Tree testing for navigation structures
+- A/B testing for comparing solutions
+- Analytics review for quantitative insights
+- Heatmaps for understanding user attention
+
+## UX Deliverables
+- User personas and scenarios
+- Customer journey maps
+- User flow diagrams
+- Information architecture
+- Wireframes and prototypes
+- Usability test reports
+- Design specifications

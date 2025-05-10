@@ -1,0 +1,42 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Designer-Developer Collaboration
+
+## Communication Principles
+- Establish shared vocabulary between designers and developers
+- Use design systems to create common understanding
+- Document design decisions and rationales
+- Create explicit handoff processes
+- Schedule regular cross-functional meetings
+- Establish feedback loops for continuous improvement
+
+## Design Handoff Best Practices
+- Provide precise specifications for all UI elements
+  - Colors with exact HEX/RGB/HSL values
+  - Typography with font family, size, weight, and line height
+  - Spacing measurements and layout grids
+  - Component states (normal, hover, active, disabled)
+  
+- Include responsive breakpoints and behavior
+- Document component variants and conditions
+- Provide animation specifications (timing, easing)
+- Include accessibility requirements
+
+## Development Considerations
+- Consider technical feasibility early in design process
+- Include developers in design reviews
+- Create reusable component libraries
+- Establish naming conventions that work across disciplines
+- Document both ideal and fallback behaviors
+- Follow Conway's Law: system design reflects communication structure
+- Apply Occam's Razor: prefer simpler solutions with fewer assumptions
+
+## Collaboration Tools
+- Design systems and component libraries
+- Version control for design assets
+- Collaboration platforms with commenting features
+- Prototyping tools with code export capabilities
+- Documentation that's accessible to both disciplines

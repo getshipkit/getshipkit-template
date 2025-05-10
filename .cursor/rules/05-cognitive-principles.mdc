@@ -1,0 +1,45 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Cognitive Principles in UX
+
+## Cognitive Biases to Consider
+- Confirmation bias: Users favor information confirming their beliefs
+- Anchoring bias: Users rely heavily on first piece of information
+- Bandwagon effect: Users follow what others are doing
+- Dunning-Kruger effect: Users overestimate their abilities
+- Halo effect: Positive impression in one area affects perception of other areas
+- Recency bias: Users remember most recent interactions more vividly
+- Serial position effect: Users remember first and last items better
+- Baby Duck Syndrome: Users prefer familiar interfaces they learned first
+
+## UX Laws to Apply
+- Fitts's Law: Time to target depends on distance and size
+  - Make important interactive elements larger
+  - Position common actions within easy reach
+  - Consider edge and corner placement for easy targeting
+  
+- Hick's Law: Decision time increases with number of choices
+  - Limit options to reduce cognitive load
+  - Group related choices together
+  - Use progressive disclosure for complex interactions
+  
+- Jakob's Law: Users spend most time on other sites, expect yours to work similarly
+  - Follow established design patterns
+  - Don't reinvent standard interactions without good reason
+  
+- Miller's Law: Average person can hold 7±2 items in working memory
+  - Chunk information into manageable pieces
+  - Don't require users to remember information across screens
+  
+- Law of Proximity: Objects close together are perceived as related
+  - Group related elements visually
+  - Use whitespace to create visual separation
+
+## Mental Models
+- Align interface with users' existing mental models
+- Use familiar metaphors and analogies
+- Provide clear conceptual models for novel interfaces
+- Account for different mental models across user segments

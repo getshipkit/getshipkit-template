@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.getshipkit.com
+
+# Sitemaps
+Sitemap: https://www.getshipkit.com/sitemap.xml

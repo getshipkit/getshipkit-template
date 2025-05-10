@@ -1,0 +1,16 @@
+{
+  "name": "GetShipKit",
+  "short_name": "GetShipKit",
+  "description": "The perfect starting point for your next project with GetShipKit.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 64x64 96x96 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}

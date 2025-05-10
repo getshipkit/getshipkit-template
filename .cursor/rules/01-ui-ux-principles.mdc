@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# UI/UX Core Principles
+
+## Usability Heuristics
+- Nielsen's 10 Usability Heuristics should guide interface design
+- Visibility of system status is critical for user understanding
+- Match between system and the real world improves intuition
+- User control and freedom prevents user frustration
+- Consistency and standards reduce learning curve
+- Error prevention is better than error recovery
+- Recognition over recall reduces cognitive load
+- Flexibility and efficiency accommodates different user types
+- Aesthetic and minimalist design focuses user attention
+- Help users recognize, diagnose, and recover from errors
+- Provide help and documentation when needed
+
+## Design Principles
+- Follow WCAG accessibility guidelines
+- Use consistent visual hierarchy
+- Implement responsive design for all devices
+- Maintain appropriate color contrast (4.5:1 minimum)
+- Design for progressive disclosure of complex information
+- Keep interface elements consistent across the application
+- Apply Fitts's Law for interactive elements (larger targets are easier to hit)
+- Use Gestalt principles for visual organization
+
+## Related Resources
+Reference the PDF guidelines on usability heuristics, design principles, and accessibility.

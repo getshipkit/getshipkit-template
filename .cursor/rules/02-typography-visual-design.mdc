@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Typography and Visual Design
+
+## Typography Best Practices
+- Choose font pairings that complement each other (see Google Fonts pairings guide)
+- Use no more than 2-3 typefaces in one design
+- Establish a clear type hierarchy with distinct sizes for headers, subheaders, and body text
+- Ensure adequate line height (1.5x font size for body text)
+- Maintain proper line length (45-75 characters per line)
+- Use consistent letter spacing and word spacing
+- Consider font weight for emphasis instead of color alone
+- Test readability on different devices and screen sizes
+
+## Visual Design Elements
+- Implement consistent spacing using a grid system
+- Apply Gestalt principles for element grouping:
+  - Proximity: Group related items
+  - Similarity: Similar items are perceived as related
+  - Continuity: Elements arranged in a line are perceived as related
+  - Closure: Mind fills in incomplete shapes
+  - Figure/Ground: Objects distinguished from background
+- Use color psychology to convey appropriate emotions
+- Maintain sufficient white space for visual breathing room
+- Ensure interactive elements have appropriate affordances
+- Design for accessibility with adequate color contrast
+
+## Color Usage
+- Develop a consistent color palette with primary, secondary, and accent colors
+- Use color to guide attention and indicate hierarchy
+- Ensure all color combinations meet WCAG contrast standards
+- Don't rely solely on color to convey information
+- Consider cultural implications of color choices

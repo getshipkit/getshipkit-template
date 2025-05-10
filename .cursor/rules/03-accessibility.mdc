@@ -1,0 +1,47 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Accessibility Guidelines
+
+## POUR Principles
+- Perceivable: Information must be presentable in ways all users can perceive
+  - Provide text alternatives for non-text content
+  - Provide captions and alternatives for multimedia
+  - Create content that can be presented in different ways
+  - Make it easier for users to see and hear content
+  
+- Operable: Interface components must be operable by all users
+  - Make all functionality available from a keyboard
+  - Give users enough time to read and use content
+  - Avoid content that could cause seizures or physical reactions
+  - Help users navigate and find content
+  - Make it easier to use inputs other than keyboard
+  
+- Understandable: Information and operation must be understandable
+  - Make text readable and understandable
+  - Make content appear and operate in predictable ways
+  - Help users avoid and correct mistakes
+  
+- Robust: Content must be robust enough to work with current and future technologies
+  - Maximize compatibility with current and future user tools
+
+## WCAG 2.1 Compliance
+- Aim for at least AA compliance level
+- Use semantic HTML elements
+- Implement proper heading structure (h1-h6)
+- Include proper alt text for images
+- Ensure keyboard navigability
+- Maintain focus visibility
+- Provide sufficient color contrast
+- Support screen readers with ARIA when necessary
+- Test with actual assistive technologies
+
+## Common Accessibility Patterns
+- Skip navigation links
+- Proper form labels and error handling
+- Consistent navigation
+- Descriptive link text (avoid "click here")
+- Responsive design that works at 200% zoom
+- Support for reduced motion preferences
