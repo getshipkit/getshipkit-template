@@ -374,6 +374,47 @@ BEGIN
 END;
 $$;
 
+-- Create a public version of the auth function to ensure backward compatibility
+-- This preserves the exact same functionality but in the public schema
+CREATE OR REPLACE FUNCTION public.has_active_subscription_for_auth()
+RETURNS boolean
+LANGUAGE plpgsql
+SECURITY DEFINER
+AS $$
+DECLARE
+  user_id text;
+BEGIN
+  -- Get user_id from JWT similar to auth.uid()
+  user_id := (current_setting('request.jwt.claims', true)::json->>'sub')::text;
+  
+  -- Check if user has active subscription using the same logic
+  RETURN public.has_active_subscription(user_id);
+END;
+$$;
+
+-- Create a comment to document the replacement
+COMMENT ON FUNCTION public.has_active_subscription_for_auth() IS 
+'Replacement for auth.has_active_subscription(). Use this function in RLS policies to check if the current user has an active subscription.';
+
+-- Add a helper view to check subscription status
+-- This can be used to easily check subscription status for the current user
+CREATE OR REPLACE VIEW my_subscription_status AS
+SELECT 
+  s.id,
+  s.status,
+  s.product_id,
+  s.current_period_end,
+  s.cancel_at_period_end,
+  (s.status IN ('active', 'ending', 'trial', 'past_due') AND 
+   (s.current_period_end > now() OR s.current_period_end IS NULL)) as is_active
+FROM 
+  subscriptions s
+WHERE 
+  s.user_id = (current_setting('request.jwt.claims', true)::json->>'sub')::text
+ORDER BY 
+  s.created_at DESC
+LIMIT 1;
+
 -- Trigger: set_profiles_updated_at
 CREATE TRIGGER set_profiles_updated_at 
 BEFORE UPDATE ON profiles 
@@ -502,6 +543,8 @@ COMMENT ON COLUMN subscriptions.cancel_at_period_end IS 'Indicates if the subscr
 COMMENT ON COLUMN feedback.type IS 'Type of feedback: bug, feature, or general';
 COMMENT ON COLUMN feedback.status IS 'Status of the feedback: open, in_progress, resolved, or closed';
 
+-- Original auth function (commented out as it requires special permissions)
+/*
 -- Create auth helper function for checking active subscriptions
 CREATE OR REPLACE FUNCTION auth.has_active_subscription()
 RETURNS boolean
@@ -519,3 +562,17 @@ BEGIN
   RETURN public.has_active_subscription(user_id);
 END;
 $$; 
+*/
+
+-- NOTE: The auth.has_active_subscription() function requires special permissions in Supabase
+-- Instead, use one of the following approaches:
+-- 1. Request Supabase support to create the auth function for you
+-- 2. Use public.has_active_subscription_for_auth() function as a drop-in replacement
+-- 3. For RLS policies, use this pattern instead:
+--    USING (EXISTS (
+--      SELECT 1 FROM subscriptions 
+--      WHERE user_id = (current_setting('request.jwt.claims', true)::json->>'sub')::text
+--      AND status IN ('active', 'ending', 'trial', 'past_due') 
+--      AND (current_period_end > now() OR current_period_end IS NULL)
+--    ))
+-- 4. Query the my_subscription_status view to check subscription status 
