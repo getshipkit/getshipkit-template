@@ -459,5 +459,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
 
-This project is licensed under a **Custom Commercial License** - see the [LICENSE.md](LICENSE.md) file for details. This license allows for use in a single commercial or personal project with certain restrictions on redistribution and resale.
+This project is licensed under the **MIT License** - see the [LICENSE.md](LICENSE.md) file for details. You are free to use, modify, distribute, and sell this software with minimal restrictions.
 
